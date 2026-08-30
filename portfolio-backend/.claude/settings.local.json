@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -v)",
+      "Bash(composer -V)",
+      "Bash(composer show *)",
+      "Bash(systemctl is-active *)",
+      "Bash(mysql -u root -e \"SELECT VERSION\\(\\);\")",
+      "Bash(sudo -n mysql -e \"SELECT VERSION\\(\\);\")",
+      "Bash(php -m)",
+      "Bash(php -r \"echo extension_loaded\\('pdo_sqlite'\\)?'pdo_sqlite YES':'pdo_sqlite NO';\")",
+      "Bash(php -r \"echo extension_loaded\\('pdo_mysql'\\)?'pdo_mysql YES':'pdo_mysql NO';\")",
+      "Bash(composer create-project *)",
+      "Bash(php artisan *)",
+      "Bash(mysql --version)",
+      "Bash(npm -v)",
+      "Bash(git --version)",
+      "Bash(mysql -u root -p'Hasib@12345678' -e \"CREATE DATABASE IF NOT EXISTS portfolio_backend CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; SHOW DATABASES LIKE 'portfolio%';\")",
+      "Read(//tmp/**)",
+      "Bash(rm -rf pb-scaffold)",
+      "Bash(composer require *)",
+      "Bash(php -r ' *)",
+      "Bash(curl -s -o /dev/null http://127.0.0.1:8000/up)",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/api/login -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"email\":\"info@hasib.com\",\"password\":\"42862266\"}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(grep -rnoE \"apiCall\\\\\\(\\\\s*'[a-z]+'\\\\s*,\\\\s*[\\\\`'][^\\\\`']*[\\\\`']\" app/ components/ lib/)",
+      "Bash(mysql -u root -p'Hasib@12345678' -e \"SHOW DATABASES LIKE 'portfolio_backend';\")",
+      "Bash(mysql -u root -p'Hasib@12345678' portfolio_backend -e \"SHOW TABLES;\")",
+      "Bash(grep -v \"^$\")",
+      "Bash(chmod +x scripts/smoke-test.sh)",
+      "Bash(./scripts/smoke-test.sh)",
+      "Bash(curl -s -o /dev/null -w \"backend up: %{http_code}\\\\n\" http://127.0.0.1:8000/api/hero)",
+      "Bash(rm -rf .next)",
+      "Bash(npx next *)",
+      "Bash(PORT=3000 npx next dev)",
+      "Bash(cd *)",
+      "Bash(curl -s -o /dev/null http://127.0.0.1:3000)",
+      "Bash(curl -s -o /dev/null http://127.0.0.1:3001/login)",
+      "Bash(curl -s -o /dev/null -w \"backend  /api/hero : %{http_code}\\\\n\" http://127.0.0.1:8000/api/hero)",
+      "Bash(curl -s http://127.0.0.1:8000/api/hero)"
+    ]
+  }
+}

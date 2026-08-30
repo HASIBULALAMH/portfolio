@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(echo \"started, pid $!\")",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 3 http://localhost:3000/)",
+      "Bash(npm ls *)",
+      "Bash(curl -s -o /dev/null -w \"backend:%{http_code}\\\\n\" http://localhost:8000/api/testimonials)",
+      "Bash(curl -s -o /dev/null -w \"frontend:%{http_code}\\\\n\" http://localhost:3000)",
+      "Read(//media/hasibul-alam/D/portfolio/portfolio-backend/**)",
+      "Bash(curl -s http://localhost:8000/api/testimonials)",
+      "Bash(python3 -m json.tool)",
+      "Bash(awk '/\\\\.card-hover/,/^}/' app/globals.css)",
+      "Bash(node probe-testimonial-repeat.js)",
+      "Bash(node probe-testimonial-interval.js)",
+      "Bash(node probe-testimonial-repeat2.js)",
+      "Bash(node verify-testimonial-carousel.js)",
+      "Bash(sed 's|http://localhost:3000|http://localhost:3100|g' verify-testimonial-carousel.js)",
+      "Bash(node verify-prod.js)",
+      "Bash(cp /tmp/probe404.js /media/hasibul-alam/D/portfolio/audit/probe404.js)",
+      "Bash(node probe404.js)",
+      "Bash(pkill -f \"next start -p 3100\")",
+      "Bash(curl -s -o /dev/null -w \"3100 now: %{http_code}\\\\n\" --max-time 3 http://localhost:3100)",
+      "Bash(rm -f /media/hasibul-alam/D/portfolio/audit/probe404.js /media/hasibul-alam/D/portfolio/audit/verify-prod.js /tmp/probe404.js)",
+      "Bash(curl -s -o /dev/null -w \"3100: %{http_code}\\\\n\" --max-time 3 http://localhost:3100)",
+      "Bash(curl -s -o /dev/null -w \"3000 \\(dev, left running\\): %{http_code}\\\\n\" --max-time 3 http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"3000: %{http_code}\\\\n\" --max-time 3 http://localhost:3000)",
+      "Bash(python3 -c ' *)",
+      "Bash(node probe-testimonials-3bugs.js)",
+      "Bash(curl *)",
+      "Bash(node probe-avatar-centering.js)",
+      "Bash(node probe-avatar-reachable.js)",
+      "Bash(node probe-transition-frames.js)"
+    ]
+  }
+}

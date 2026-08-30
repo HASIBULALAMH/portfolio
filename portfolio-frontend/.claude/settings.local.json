@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(rm -rf /tmp/pf-backup)",
+      "Bash(mkdir -p /tmp/pf-backup)",
+      "Bash(cp -r app components lib package.json components.json tsconfig.json next.config.mjs /tmp/pf-backup/)",
+      "Read(//tmp/**)",
+      "Bash(npm run *)"
+    ]
+  }
+}
